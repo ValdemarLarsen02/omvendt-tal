@@ -6,7 +6,7 @@ let tries = 0;
 function newGuess() {
     // Tjek om der overhovedet er muligheder tilbage
     if (min > max) {
-        document.getElementById("message").textContent = "Noget gik galt – har du snydt? 😅";
+        document.getElementById("message").textContent = "Noget gik galt – har du snydt?";
         return;
     }
 
@@ -14,7 +14,7 @@ function newGuess() {
     if (min === max) {
         guess = min;
         document.getElementById("guess").textContent = guess;
-        document.getElementById("message").textContent = `Det må være ${guess}! Der er ingen andre muligheder. 🎯`;
+        document.getElementById("message").textContent = `Det må være ${guess}! Der er ingen andre muligheder.`;
         document.getElementById("buttons").innerHTML = "<p>Spillet er slut!</p>";
         return;
     }
@@ -64,3 +64,4 @@ function init() {
 }
 
 window.addEventListener("DOMContentLoaded", init);
+
