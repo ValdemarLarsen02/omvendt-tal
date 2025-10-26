@@ -31,21 +31,21 @@ function newGuess() {
 }
 
 function tooLow() {
-    // Justér minimum
+    // Juster min
     min = guess + 1;
     document.getElementById("message").textContent = "Okay, jeg prøver et højere tal...";
     newGuess();
 }
 
 function tooHigh() {
-    // Justér maksimum
+    // Juster max
     max = guess - 1;
     document.getElementById("message").textContent = "Okay, jeg prøver et lavere tal...";
     newGuess();
 }
 
 function correct() {
-    // Kommentar baseret på antal gæt
+    // Beskeden til client/bruger
     let comment = "";
     if (tries <= 3) comment = "Super";
     else if (tries <= 5) comment = "Godt klaret";
@@ -64,4 +64,5 @@ function init() {
 }
 
 window.addEventListener("DOMContentLoaded", init);
+
 
